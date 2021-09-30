@@ -1,0 +1,3 @@
+[submodule "src/BBPPiCalculator"]
+	path = src/BBPPiCalculator
+	url = git@github.com:BrightChain/BBPPiCalculator.git

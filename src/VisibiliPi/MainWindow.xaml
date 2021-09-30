@@ -1,0 +1,18 @@
+﻿<Window x:Class="VisibiliPi.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VisibiliPi"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Border x:Name="btn1" BorderBrush="Black" BorderThickness="1" Margin="22,27,611,347" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+            <Border.Effect>
+                <DropShadowEffect/>
+            </Border.Effect>
+        </Border>
+        <Label x:Name="lblDigit" Content="Digit" HorizontalAlignment="Left" Margin="216,44,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
