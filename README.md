@@ -9,7 +9,7 @@ Very clunky quickly thrown together app.
 
 # More info
 - the n'th digit of Pi (in hex), which is technically a nibble, is now a 0-15 value
- 0. 243f6a8885
- 1. 43F6A8885A
+ 0. 2 .. (discarded: 43f6a8885)
+ 1. 4 .. (discarded: 3F6A8885A) <- note the shift
 
 ... and so on
