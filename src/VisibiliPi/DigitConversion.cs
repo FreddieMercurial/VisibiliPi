@@ -21,11 +21,8 @@ namespace VisibiliPi
                 fromBase: 16);
         }
 
-        // the n'th digit of Pi (in hex), which is technically a nibble, is now a 0-15 value
-        //0->243f6a8885
-        //1->43F6A8885A
         public static double DigitToWavelength(int digit)
-            => WavelengthToRGB.VISIBLE_SPECTRUM_LOW_NM + (DigitToPiHexDigit(digit) * WavelengthToRGB.NM_PER_COUNT);
+            => PiHexDigitToWavelength(DigitToPiHexDigit(digit));
 
         public static double PiHexDigitToWavelength(byte piHexDigit) =>
             WavelengthToRGB.VISIBLE_SPECTRUM_LOW_NM + (piHexDigit * WavelengthToRGB.NM_PER_COUNT);
