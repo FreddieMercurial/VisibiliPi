@@ -1,4 +1,4 @@
-# VisibiliPi
+# VisibiliPi (Visible-'ih'-Pie, VisibilePie. Not VisiblePee, silly.)
 Visualizing Pi using RGB
 
 - Calculates the Nth digit of Pi, starting at zero (incrementing with each button click)
