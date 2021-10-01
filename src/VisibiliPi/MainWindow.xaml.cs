@@ -23,9 +23,9 @@ namespace VisibiliPi
 
         private void Btn1_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            var hexDigit = DigitConversion.DigitToHexDigit(this.CurrentDigit);
-            var wavelength = DigitConversion.HexDigitToWavelength(
-                    hexDigit: hexDigit);
+            var piHexDigit = DigitConversion.DigitToPiHexDigit(this.CurrentDigit);
+            var wavelength = DigitConversion.PiHexDigitToWavelength(
+                    piHexDigit: piHexDigit);
             var rgb = WavelengthToRGB.WaveLengthToRGB(Wavelength: wavelength);
             this.Background = new SolidColorBrush(Color.FromRgb(
                     r: (byte)rgb.Red,
@@ -34,7 +34,7 @@ namespace VisibiliPi
             lblDigit.Content = string.Format(
                 "n: {0}, pi hex: {1:X}, lambda: {2}, r: {3}, g: {4}, b: {5}",
                 this.CurrentDigit++,
-                hexDigit,
+                piHexDigit,
                 wavelength,
                 rgb.Red,
                 rgb.Green,

@@ -11,7 +11,7 @@ namespace VisibiliPi
             return new PiDigit().Calc(digit);
         }
 
-        public static byte DigitToHexDigit(int digit)
+        public static byte DigitToPiHexDigit(int digit)
         {
             // 1/16th of the total bandwidth
             var bbpResult = GetDigit(
@@ -25,10 +25,14 @@ namespace VisibiliPi
         //0->243f6a8885
         //1->43F6A8885A
         public static double DigitToWavelength(int digit)
-            => WavelengthToRGB.VISIBLE_SPECTRUM_LOW_NM + (DigitToHexDigit(digit) * WavelengthToRGB.NM_PER_COUNT);
+            => WavelengthToRGB.VISIBLE_SPECTRUM_LOW_NM + (DigitToPiHexDigit(digit) * WavelengthToRGB.NM_PER_COUNT);
 
-        public static double HexDigitToWavelength(byte hexDigit) =>
-            WavelengthToRGB.VISIBLE_SPECTRUM_LOW_NM + (hexDigit * WavelengthToRGB.NM_PER_COUNT);
+        public static double PiHexDigitToWavelength(byte piHexDigit) =>
+            WavelengthToRGB.VISIBLE_SPECTRUM_LOW_NM + (piHexDigit * WavelengthToRGB.NM_PER_COUNT);
+
+        public static RGBValue PiHexDigitToRGB(byte piHexDigit) =>
+            WavelengthToRGB.WaveLengthToRGB(
+                Wavelength: PiHexDigitToWavelength(piHexDigit: piHexDigit));
 
         public static RGBValue DigitToRGB(int digit) =>
             WavelengthToRGB.WaveLengthToRGB(
